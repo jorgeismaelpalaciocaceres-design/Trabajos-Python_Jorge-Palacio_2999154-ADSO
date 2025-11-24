@@ -3,3 +3,5 @@ Este repositorio contiene todos los trabajos desarrollados o en desarrollo con e
 
 - Aca ponemos una prueba de cambio del repositorion con el fin de probar nuestro promer commit
 realizamos otra prueba de cambios
+
+Esta es la segunda prueba de commit al main directo,
