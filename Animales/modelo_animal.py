@@ -1,10 +1,10 @@
 class Animal():
     #? Constructor
-    def __init__(self, data_nombre, data_edad, data_habitad, data_dieta, data_tamano, data_color):
+    def __init__(self, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color):
         self.nombre = data_nombre
         #! Atributo privado
         self.__edad = data_edad
-        self.habitad = data_habitad
+        self.habitat = data_habitat
         self.dieta = data_dieta
         self.tamano = data_tamano
         self.color = data_color
@@ -13,10 +13,10 @@ class Animal():
 # ?          Gets y Sets      
 # ==========================================
 
-    def get(self):
+    def get_edad(self):
         return self.__edad
     
-    def set(self, nueva_edad):
+    def set_edad(self, nueva_edad):
         if(nueva_edad > 5):
             self.__edad = nueva_edad
             mensaje = f"Edad de {self.nombre} actualizada con exito!" 
@@ -49,8 +49,8 @@ class Animal():
         return mensaje
     
     def descansar(self):
-        meensaje = f"El {self.nombre} esta descansando"
-        return meensaje
+        mensaje = f"El {self.nombre} esta descansando"
+        return mensaje
     
     def dormir(self):
         mensaje = f"El {self.nombre} esta durmiendo"

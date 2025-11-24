@@ -28,8 +28,8 @@ objeto_carnivoro1 = Carnivoros("León", "15", "Terrestre", "Carnivoro", "Medioan
 #! Instinto al tener habre de los carnivoros a cazar
 print(objeto_carnivoro1.cazar())
 #? Get de su atributo privado
-print(objeto_carnivoro1.get())
+print(objeto_carnivoro1.get_edad())
 #? Set (Modificación) de su atrubuto privado
-print(objeto_carnivoro1.set(8))
+print(objeto_carnivoro1.set_edad(8))
 #? Verificación de modificación de edad (Atributo privado)
-print(objeto_carnivoro1.get())
+print(objeto_carnivoro1.get_edad())
