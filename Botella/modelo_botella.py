@@ -1,17 +1,16 @@
 class Botella:
     def __init__(self, dato_material, dato_capacidad, dato_forma):
+        # Atributos (Características)
         self.material = dato_material
         self.capacidad = dato_capacidad
         self.forma = dato_forma
         
+    # Método (Acción)
     def contener_liquido(self, dato_liquido):
-        mensaje = f"Se almaceno solo : {dato_liquido} -  Con una capacidad de : {self.capacidad}"
-        return mensaje
+        mensaje = f"Se almacenó solo: {dato_liquido} - Con una capacidad de: {self.capacidad}"
+        print(mensaje) # Cambié return por print para que salga directo en consola al probar
     
-# ==========================================
-# ?          Gets y Sets         
-# ==========================================
-
+    # Getters y Setters (Para obtener o cambiar valores)
     def get_material(self):
         return self.material
     
@@ -19,5 +18,6 @@ class Botella:
         self.material = dato_material
 
     def imprimir_datos(self):
-        mensaje = f"Nombre del material : {self.material} - Capacidad : {self.capacidad}"
+        mensaje = f"Material: {self.material} - Capacidad: {self.capacidad} - Forma: {self.forma}"
         return mensaje
+    
