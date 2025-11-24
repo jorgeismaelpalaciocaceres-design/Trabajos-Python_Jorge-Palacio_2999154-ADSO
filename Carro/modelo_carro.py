@@ -1,11 +1,34 @@
 class Carro:
     #? CONSTRUCTOR
-    def __init__(self, dato_modelo, dato_color, dato_motor):
+    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa):
         self.modelo = dato_modelo
         self.color = dato_color
         self.motor = dato_motor
+        #! ATRIBUTO PRIVADO (Encapsulamiento)
+        self.__placa = dato_placa
 
-    #? METODOS
+# ==========================================
+# ?          Gets y Sets      
+# ==========================================
+
+    #!Getter
+    def get_placa(self):
+        return self.__placa
+    
+    #!Setters (Modificaciones con validacion)
+    def set(self, nueva_placa):
+        if(len(nueva_placa) == 3):
+            self.__placa = nueva_placa
+            mensaje = "Se cambio la placa con exito"
+        else:
+            mensaje = "La placa debe tener 3 Caracteres"
+        return mensaje
+
+
+# ==========================================
+# ?          Metodos         
+# ==========================================
+
     def arrancar(self):
         mensaje = f"El carro: {self.modelo} esta arrancando su motor: {self.motor}"
         return mensaje

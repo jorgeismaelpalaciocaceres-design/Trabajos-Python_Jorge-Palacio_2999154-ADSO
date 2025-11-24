@@ -1,12 +1,16 @@
 from modelo_carro import Carro
 
 class Deportivo(Carro):
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_puertas, dato_combustible):
-        super().__init__(dato_modelo, dato_color, dato_motor)
+    #? CONSTRUCTOR
+    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa, dato_puertas, dato_combustible):
+        super().__init__(dato_modelo, dato_color, dato_motor, dato_placa)
         self.puertas = dato_puertas
         self.combustible = dato_combustible
 
-    #? Definomos los metodos para el los carros deportivos
+
+# ==========================================
+# ?          Metodos         
+# ==========================================
 
     def encender_aire(self, dato_aire):
         if (dato_aire == "Encender"):

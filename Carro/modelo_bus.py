@@ -1,9 +1,15 @@
 from modelo_carro import Carro
 
 class Bus(Carro):
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_capacidad):
-        super().__init__(dato_modelo, dato_color, dato_motor)
+    #? CONSTRUCTOR
+    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa, dato_capacidad):
+        super().__init__(dato_modelo, dato_color, dato_motor, dato_placa)
         self.capacidad = dato_capacidad
+
+
+# ==========================================
+# ?          Metodos         
+# ==========================================
 
     def recoger_pasajeros(self, dato_cantidad_pasajeros):
         if (dato_cantidad_pasajeros < self.capacidad):
