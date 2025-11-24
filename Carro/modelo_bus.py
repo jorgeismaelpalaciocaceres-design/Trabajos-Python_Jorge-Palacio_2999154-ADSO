@@ -6,5 +6,8 @@ class Bus(Carro):
         self.capacidad = dato_capacidad
 
     def recoger_pasajeros(self, dato_cantidad_pasajeros):
-        mensaje = f"La camioneta: {self.modelo} regio {dato_cantidad_pasajeros}!"
+        if (dato_cantidad_pasajeros < self.capacidad):
+            mensaje = f"El bus tipo ({self.modelo}) regio {dato_cantidad_pasajeros} pasajeros!"
+        else:
+            mensaje = f"Excede la capacidad del Bus:{self.modelo} que es de {self.capacidad}"
         return mensaje
