@@ -8,7 +8,7 @@ class Botella:
     # Método (Acción)
     def contener_liquido(self, dato_liquido):
         mensaje = f"Se almacenó solo: {dato_liquido} - Con una capacidad de: {self.capacidad}"
-        print(mensaje) # Cambié return por print para que salga directo en consola al probar
+        return mensaje
     
     # Getters y Setters (Para obtener o cambiar valores)
     def get_material(self):

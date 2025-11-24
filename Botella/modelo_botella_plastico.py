@@ -13,5 +13,5 @@ class Botella_Plastico(Botella):
         dato_mensaje = super().imprimir_datos() 
         # Le sumamos los datos nuevos
         mensaje = f"{dato_mensaje} - Color: {self.color} - Tamaño: {self.tamano}"
-        print(mensaje)
+        return mensaje
 
