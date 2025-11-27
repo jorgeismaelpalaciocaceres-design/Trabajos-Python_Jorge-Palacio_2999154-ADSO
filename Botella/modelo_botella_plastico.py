@@ -8,6 +8,10 @@ class Botella_Plastico(Botella):
         self.color = dato_color
         self.tamano = dato_tamano
 
+# ==========================================
+# ?          Metodos         
+# ==========================================
+
     def imprimir_datos(self):
         # Traemos los datos del padre
         dato_mensaje = super().imprimir_datos() 
@@ -15,3 +19,6 @@ class Botella_Plastico(Botella):
         mensaje = f"{dato_mensaje} - Color: {self.color} - Tamaño: {self.tamano}"
         return mensaje
 
+    def reutilizar(self):
+        mensaje = f"La botella de {self.material} esta siendo depositada en un recipiednte de reciclaje exclusivo para plastico"
+        return mensaje
