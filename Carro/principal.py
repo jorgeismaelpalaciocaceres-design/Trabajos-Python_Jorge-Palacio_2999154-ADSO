@@ -1,6 +1,7 @@
 from modelo_carro import Carro
-from modelo_bus import Bus
+from modelo_transporte_publico import Transporte_Publico
 from modelo_deportivo import Deportivo
+from modelo_camion import Camion
 
 # ==========================================
 # ?          Código principal          
@@ -18,8 +19,8 @@ print(objeto_carro1.direccion("Derecha"))
 #! Encendemos las luces 
 print(objeto_carro1.luces("Encender"))
 
-#* 2. Creamos un Bus 
-objeto_bus1 = Bus("Escolar", "Amarillo", "Cummins L9 e ISB6.7 G", "FKS", 72)
+#* 2. Creamos un Transporte publico
+objeto_bus1 = Transporte_Publico("Escolar", "Amarillo", "Cummins L9 e ISB6.7 G", "FKS", 72)
 #! Recogemos pasajeros
 print(objeto_bus1.recoger_pasajeros(70))
 #! Arrancamos el Bus
@@ -43,4 +44,10 @@ print(objeto_deportivo1.ajustar_espejos())
 print(objeto_deportivo1.get_placa())
 #? Modificar atributo privado GET
 print(objeto_deportivo1.set("DDD"))
+
+#* 4. Creamos un camion
+objeto_camion1 = Camion("Chevrolet", "Blanco", "Isuzu", "ADS", "4.510 kg")
+#! Cargamos el material
+print(objeto_camion1.cargar("Tierra"))
+
 
