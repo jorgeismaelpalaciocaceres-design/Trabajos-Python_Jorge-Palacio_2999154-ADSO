@@ -52,3 +52,6 @@ print(objeto_acuatico1.comunicarse())
 print(objeto_acuatico1.moverse())
 #! El animal respirar
 print(objeto_acuatico1.respirar())
+
+#! Animal genérico (No deja ABC) Abstracción formal
+animal_generico= Animal("Animal Genperico", 22, "Todos lados", "Come todo", "Estandar", "Color Genérico")

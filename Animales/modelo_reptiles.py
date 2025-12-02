@@ -10,7 +10,13 @@ class Reptiles(Animal):
 # ?          Metodos         
 # ==========================================
 
+    #? Metodo obligatorio
+    def comunicarse(self):
+        mensaje = f"El {self.nombre} se esta comunicando químicamente atravéz de las feromonas"
+        return mensaje
+
     #! Instinto
     def cazar(self):
         mensaje = f"El {self.nombre} de raza {self.raza} Empieza a cazar al tener hambre"
         return mensaje
+    

@@ -10,6 +10,11 @@ class Mamiferos_Terrestrs(Animal):
 # ?          Metodos         
 # ==========================================
 
+    #? Metodo obligatorio
+    def comunicarse(self):
+        mensaje = f"El {self.nombre} se esta por medio de señales visuales por medio de su cuerpo y haciendo sonidos"
+        return mensaje
+
     def tener_un_hijo_por_parto(self):
         mensaje = f"El {self.tipo} {self.genero} esta teniendo un parto" 
         return mensaje

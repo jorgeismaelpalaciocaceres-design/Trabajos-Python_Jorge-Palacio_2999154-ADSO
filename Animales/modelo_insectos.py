@@ -9,6 +9,7 @@ class Insectos(Animal):
 # ==========================================
 # ?          Metodos         
 # ==========================================
+
     def comunicarse(self):
         mensaje = f"El {self.tipo} {self.nombre} se esta comunicando por medio de feromonas sonidos y danzas"
         return mensaje

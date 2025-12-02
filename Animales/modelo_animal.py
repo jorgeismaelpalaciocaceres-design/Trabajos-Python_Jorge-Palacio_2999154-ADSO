@@ -1,4 +1,7 @@
-class Animal():
+from abc import ABC, abstractmethod
+
+#!Abstracción Formal ABC (Abstract Base Classes) Clase Base o Padre
+class Animal(ABC):
     #? Constructor
     def __init__(self, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color):
         self.nombre = data_nombre
@@ -28,16 +31,17 @@ class Animal():
 # ?          Metodos         
 # ==========================================
 
+    #! Metodo obligatorio para todos las clases hijas
+    @abstractmethod 
+    def comunicarse(self):
+        pass
+
     def moverse(self):
         mensaje = f"El {self.nombre} se esta desplazando por su habitad"
         return mensaje
 
     def alimentarse(self):
         mensaje = f"EL {self.nombre} se esta alimentando"
-        return mensaje
-    
-    def comunicarse(self):
-        mensaje = f"El {self.nombre} se esta comunicando como lo hace habitualmente su especie"
         return mensaje
     
     def reproducirse(self):
