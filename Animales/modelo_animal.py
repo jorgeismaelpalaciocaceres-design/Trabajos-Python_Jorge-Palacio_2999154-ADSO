@@ -31,7 +31,7 @@ class Animal(ABC):
 # ?          Metodos         
 # ==========================================
 
-    #! Metodo obligatorio para todos las clases hijas
+    #! Metodo Contrato
     @abstractmethod 
     def comunicarse(self):
         pass
