@@ -5,7 +5,7 @@ class Animal(ABC):
     #? Constructor
     def __init__(self, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color):
         self.nombre = data_nombre
-        #! Atributo privado
+        #! Atributo privado (Encapsulamiento)
         self.__edad = data_edad
         self.habitat = data_habitat
         self.dieta = data_dieta
