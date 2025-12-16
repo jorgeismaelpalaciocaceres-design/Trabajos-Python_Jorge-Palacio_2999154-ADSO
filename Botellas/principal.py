@@ -1,5 +1,6 @@
 from modelo_botella import Botella
 from modelo_botella_plastico import Botella_Plastico 
+from base_de_datos import Base_Datos
 
 # ==========================================
 # ?          Código principal          
@@ -21,3 +22,15 @@ objeto_plastico = Botella_Plastico("Plástico", "600ml", "Ergonómica", "Azul", 
 # 4. Imprimimos todos sus datos
 mensjae2 = objeto_plastico.imprimir_datos()
 print(mensjae2)
+
+
+#! Codigo principal CRUD
+#? 1.Crear el objeto
+
+obj_base_datos = Base_Datos()
+material = input("ingrese el material: ")
+material = input("ingrese el material: ")
+obj_botella = Botella(material)
+
+obj_base_datos.guardar_objeto(obj_botella)
+
