@@ -1,37 +1,36 @@
 from abc import ABC, abstractmethod
 
-#!Abstracción Formal ABC (Abstract Base Classes) Clase Base o Padre
+#! Clase Base o Padre
 class Animal(ABC):
-    #? Constructor
-    def __init__(self, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color):
+    #? Agregamos 'dato_id' al inicio del constructor
+    def __init__(self, dato_id, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color):
+        self.id = dato_id   
         self.nombre = data_nombre
-        #! Atributo privado (Encapsulamiento)
         self.__edad = data_edad
         self.habitat = data_habitat
         self.dieta = data_dieta
         self.tamano = data_tamano
         self.color = data_color
 
-# ==========================================
-# ?          Gets y Sets      
-# ==========================================
-
+    # ==========================================
+    # ?          Gets y Sets      
+    # ==========================================
     def get_edad(self):
         return self.__edad
     
     def set_edad(self, nueva_edad):
-        if(nueva_edad > 5):
+        if int(nueva_edad) > 0: # Validación simple
             self.__edad = nueva_edad
-            mensaje = f"Edad de {self.nombre} actualizada con exito!" 
-        else:
-            mensaje = "La edad no puede ser menor a 5"
-        return mensaje
-    
-# ==========================================
-# ?          Metodos         
-# ==========================================
+            return "Edad actualizada"
+        return "Edad no válida"
 
-    #! Metodo Contrato
+    # ==========================================
+    # ?          Metodos Generales
+    # ==========================================
+    # Método para listar en el CRUD
+    def obtener_info_basica(self):
+        return f"ID: {self.id} | Nombre: {self.nombre} | Edad: {self.__edad} | Hábitat: {self.habitat}"
+
     @abstractmethod 
     def comunicarse(self):
         pass

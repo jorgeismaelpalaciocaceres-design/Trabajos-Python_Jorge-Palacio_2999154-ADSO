@@ -1,12 +1,10 @@
 from modelo_carro import Carro
 
 class Deportivo(Carro):
-    #? CONSTRUCTOR
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa, dato_puertas, dato_combustible):
-        super().__init__(dato_modelo, dato_color, dato_motor, dato_placa)
+    def __init__(self, dato_id, dato_modelo, dato_color, dato_motor, dato_placa, dato_puertas, dato_combustible):
+        super().__init__(dato_id, dato_modelo, dato_color, dato_motor, dato_placa)
         self.puertas = dato_puertas
         self.combustible = dato_combustible
-
 
 # ==========================================
 # ?          Metodos         

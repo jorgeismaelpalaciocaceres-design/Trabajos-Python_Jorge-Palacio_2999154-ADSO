@@ -3,12 +3,14 @@ from modelo_reptiles import Reptiles
 from modelo_mamiferos_terrestres import Mamiferos_Terrestrs
 from modelo_insectos import Insectos
 from modelo_acuaticos import Acuaticos
+from base_de_datos import BaseDatosAnimales
 
 
 # ==========================================
 # ?          Código principal          
 # ==========================================
 
+"""
 #* 1. Creación de un mamifero terrestre
 objeto_gato1 = Mamiferos_Terrestrs("GatoFelix", "6", "Terrestre", "Omnívoro", "Pequeño-Mediano", "Naranja", "Placentario", "Femenino")
 #! El animal se está moviendo
@@ -55,3 +57,29 @@ print(objeto_acuatico1.respirar())
 
 #! Animal genérico (No deja ABC) Abstracción formal
 animal_generico= Animal("Animal Genperico", 22, "Todos lados", "Come todo", "Estandar", "Color Genérico")
+"""
+# ==========================================
+# !          Codigo principal CRUD
+# ==========================================
+
+
+db = BaseDatosAnimales()
+
+print("--- CREANDO ANIMALES (CREATE) ---")
+gato = Mamiferos_Terrestrs(1, "Gato Félix", "4", "Casa", "Omnívoro", "Pequeño", "Naranja", "Felino", "Macho")
+cocodrilo = Reptiles(2, "Juancho", "15", "Lago", "Carnívoro", "Grande", "Verde", "Caimán")
+
+db.guardar_animal(gato)
+db.guardar_animal(cocodrilo)
+
+print("--- LISTANDO ANIMALES ---")
+db.listar_todos()
+
+print("--- ACTUALIZANDO DATOS (UPDATE) ---")
+db.actualizar_animal(1, "Tejado", "5")
+db.listar_todos()
+
+print("--- ELIMINANDO ANIMAL (DELETE) ---")
+db.eliminar_animal(2)
+
+db.listar_todos()

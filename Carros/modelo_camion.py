@@ -1,12 +1,11 @@
 from modelo_carro import Carro
 
 class Camion(Carro):
-    #?Constructor
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa, capacidad_carga):
-        super().__init__(dato_modelo, dato_color, dato_motor, dato_placa) 
+    # Agregamos dato_id
+    def __init__(self, dato_id, dato_modelo, dato_color, dato_motor, dato_placa, capacidad_carga):
+        # Lo pasamos al super
+        super().__init__(dato_id, dato_modelo, dato_color, dato_motor, dato_placa) 
         self.capacidad_carga = capacidad_carga
-
-      
 
 # ==========================================
 # ?          Metodos         

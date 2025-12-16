@@ -1,8 +1,8 @@
 from modelo_animal import Animal
 
 class Mamiferos_Terrestrs(Animal):
-    def __init__(self, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color, dato_tipo_mamifero, dato_genero):
-        super().__init__(data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color)
+    def __init__(self, dato_id, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color, dato_tipo_mamifero, dato_genero):
+        super().__init__(dato_id, data_nombre, data_edad, data_habitat, data_dieta, data_tamano, data_color)
         self.tipo = dato_tipo_mamifero
         self.genero = dato_genero
 

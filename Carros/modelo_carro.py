@@ -1,29 +1,33 @@
 class Carro:
-    #? CONSTRUCTOR
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa):
+    #? CONSTRUCTOR (Agregamos dato_id al principio)
+    def __init__(self, dato_id, dato_modelo, dato_color, dato_motor, dato_placa):
+        self.id = dato_id
         self.modelo = dato_modelo
         self.color = dato_color
         self.motor = dato_motor
-        #! ATRIBUTO PRIVADO (Encapsulamiento)
+        #! ATRIBUTO PRIVADO
         self.__placa = dato_placa
 
-# ==========================================
-# ?          Gets y Sets      
-# ==========================================
-
+    # ==========================================
+    # ?          Metodos Nuevos para CRUD
+    # ==========================================
+    
+    def info_basica(self):
+        return f"ID: {self.id} | Modelo: {self.modelo} | Placa: {self.__placa} | Color: {self.color}"
+    
     #!Getter
     def get_placa(self):
         return self.__placa
-    
-    #!Setters (Modificaciones con validacion)
-    def set(self, nueva_placa):
+
+    #!Setters
+    def set_placa(self, nueva_placa): 
         if(len(nueva_placa) == 3):
             self.__placa = nueva_placa
             mensaje = "Se cambio la placa con exito"
         else:
             mensaje = "La placa debe tener 3 Caracteres"
         return mensaje
-
+    
 
 # ==========================================
 # ?          Metodos         

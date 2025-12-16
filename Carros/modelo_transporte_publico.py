@@ -1,11 +1,9 @@
 from modelo_carro import Carro
 
 class Transporte_Publico(Carro):
-    #? CONSTRUCTOR
-    def __init__(self, dato_modelo, dato_color, dato_motor, dato_placa, dato_capacidad):
-        super().__init__(dato_modelo, dato_color, dato_motor, dato_placa)
+    def __init__(self, dato_id, dato_modelo, dato_color, dato_motor, dato_placa, dato_capacidad):
+        super().__init__(dato_id, dato_modelo, dato_color, dato_motor, dato_placa)
         self.capacidad = dato_capacidad
-
 
 # ==========================================
 # ?          Metodos         
